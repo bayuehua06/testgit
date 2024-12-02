@@ -112,7 +112,7 @@ function filterTree() {
 }
 
 // Fetch and parse headers from content.html
-fetch('headings.html')
+fetch('../output.html')
     .then(response => response.text())
     .then(data => {
         const parser = new DOMParser();
