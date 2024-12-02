@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  overflow-x: auto; /* Allow horizontal scroll for the entire body */
+}
+
+#top {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed; /* Fixes the top section */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the viewport */
+  z-index: 10; /* Ensures it stays above other content */
+}
+
+#container {
+  display: flex;
+  flex: 1; /* Fills the remaining vertical space */
+  margin-top: 60px; /* Gives space below the fixed top section */
+  height: calc(100vh - 60px); /* Adjusts for the fixed top */
+  overflow: auto; /* Enables scrolling for the remaining content */
+}
+
+#left-side {
+  flex-shrink: 0; /* Prevent shrinking */
+  flex-grow: 0; /* Prevent growing */
+  background-color: #f0f0f0; /* Optional background */
+  border-right: 2px solid #ccc;
+  box-sizing: border-box;
+  overflow: auto; /* Allow scrolling for the content */
+  overflow: hidden;
+}
+
+#right-side {
+  flex: 1; /* Take up remaining space */
+  height: 100%;
+  background-color: #fff; /* Optional background */
+  overflow: hidden;
+}
+
+iframe {
+  border: none;
+  width: 100%; /* Default iframe width */
+  height: 100%; /* Full height of the container */
+}
+
+#tree-container {
+  margin: 20px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* Prevent wrapping in the entire container */
+  overflow-x: auto; /* Allow horizontal scroll for the entire tree container */
+}
+
+.tree-node {
+  cursor: pointer;
+  margin-left: 20px;
+  user-select: none;
+  white-space: nowrap; /* Prevent wrapping of text in tree nodes */
+}
+
+.tree-node .caret {
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.tree-node .caret::before {
+  content: '▶';
+  font-size: 12px;
+}
+
+.tree-node.expanded .caret::before {
+  content: '▼';
+}
+
+.tree-node ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.tree-node.expanded > ul {
+  display: block;
+}
+
+.tree-node span {
+  display: inline-block;
+}
+
+.tree-node span.highlighted {
+  background-color: yellow; /* Highlight color */
+  font-weight: bold; /* Optional: Makes it more noticeable */
+}
+
+#search-container {
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+#search-input {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+

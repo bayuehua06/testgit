@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Tree View with Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Search bar -->
+    <div id="search-container">
+        <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search the tree..." 
+            oninput="filterTree()" 
+        />
+    </div>
+
+    <!-- Tree container -->
+    <div id="tree-container">
+        <!-- Tree will be dynamically generated here -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

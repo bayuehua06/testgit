@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Political Leaders</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div id="top">Top Section</div>
+    <div id="container">
+        <!-- Left side content (index.html) -->
+        <div id="left-side">
+            <iframe id="left-iframe" src="index.html"></iframe>
+        </div>
+
+        <!-- Right side content (headings.html) -->
+        <div id="right-side">
+            <iframe src="headings.html"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const leftIframe = document.getElementById('left-iframe');
+        const leftSide = document.getElementById('left-side');
+
+        // Adjust the left-side width to match the iframe content width
+        leftIframe.addEventListener('load', () => {
+            const iframeDoc = leftIframe.contentDocument || leftIframe.contentWindow.document;
+
+            if (iframeDoc) {
+                const contentWidth = iframeDoc.body.scrollWidth; // Get the width of the iframe's content
+                console.log("Calculated iframe content width:", contentWidth);
+                
+                leftSide.style.width = `${contentWidth}px`; // Adjust the width dynamically
+            } else {
+                console.log("Unable to access iframe content.");
+            }
+        });
+    </script>
+</body>
+</html>
