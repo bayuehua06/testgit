@@ -19,6 +19,16 @@ body {
     color: #0059b3; 
 }
 
+.header-4 { 
+    font-size: 16px; 
+    color: #0073e6; 
+}
+
+.header-5 { 
+    font-size: 14px; 
+    color: #008cff; 
+}
+
 .table { 
     width: 100%; 
     border-collapse: collapse; 
