@@ -1,0 +1,51 @@
+body { 
+    font-family: Arial, sans-serif; 
+}
+
+.header-1 {
+    font-size: 24px; 
+    color: #FFFFFF; /* Black text color */
+    background-color: #333333; /* White background */
+    padding: 10px; /* Optional: Adds space around the text */
+}
+
+.header-2 { 
+    font-size: 20px; 
+    color: #004080; 
+}
+
+.header-3 { 
+    font-size: 18px; 
+    color: #0059b3; 
+}
+
+.table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 20px 0; 
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+}
+
+.table-header { 
+    background-color: #f2f2f2; 
+}
+
+.table-header-cell { 
+    font-weight: bold; 
+    padding: 10px; 
+}
+
+.table-row:nth-child(even) { 
+    background-color: #f9f9f9; 
+}
+
+.table-cell { 
+    padding: 10px; 
+}
+
+.description p { 
+    font-weight: bold; 
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */ 
+}
